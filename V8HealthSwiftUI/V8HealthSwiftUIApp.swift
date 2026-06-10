@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct V8HealthSwiftUIApp: App {
+    @State private var appCoordinator = AppCoordinator()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            appCoordinator.rootView
+                .onAppear { appCoordinator.start() }
         }
     }
 }

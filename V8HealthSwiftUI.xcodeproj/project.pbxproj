@@ -67,6 +67,16 @@
 		A1000000000000000000000E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E /* Assets.xcassets */; };
 		A1000000000000000000000F /* libBleSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F /* libBleSDK.a */; };
 		A10000000000000000000010 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* CoreBluetooth.framework */; };
+		B10000000000000000000038 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000038 /* Coordinator.swift */; };
+		B10000000000000000000039 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000039 /* AppCoordinator.swift */; };
+		B1000000000000000000003A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000003A /* MainCoordinator.swift */; };
+		B1000000000000000000003B /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000003B /* Configurator.swift */; };
+		B1000000000000000000003C /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000003C /* DashboardConfigurator.swift */; };
+		B1000000000000000000003D /* DeviceScanConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000003D /* DeviceScanConfigurator.swift */; };
+		B1000000000000000000003E /* SettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000003E /* SettingsConfigurator.swift */; };
+		B1000000000000000000003F /* LiveDataConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000003F /* LiveDataConfigurator.swift */; };
+		B10000000000000000000040 /* HistoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000040 /* HistoryConfigurator.swift */; };
+		B10000000000000000000041 /* OtherConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000041 /* OtherConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +149,16 @@
 		A20000000000000000000017 /* DeviceData_V8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceData_V8.h; sourceTree = "<group>"; };
 		A20000000000000000000018 /* BleConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BleConfig.h; sourceTree = "<group>"; };
 		A30000000000000000000001 /* V8HealthSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V8HealthSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20000000000000000000038 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B20000000000000000000039 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B2000000000000000000003A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B2000000000000000000003B /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		B2000000000000000000003C /* DashboardConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardConfigurator.swift; sourceTree = "<group>"; };
+		B2000000000000000000003D /* DeviceScanConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanConfigurator.swift; sourceTree = "<group>"; };
+		B2000000000000000000003E /* SettingsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurator.swift; sourceTree = "<group>"; };
+		B2000000000000000000003F /* LiveDataConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveDataConfigurator.swift; sourceTree = "<group>"; };
+		B20000000000000000000040 /* HistoryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryConfigurator.swift; sourceTree = "<group>"; };
+		B20000000000000000000041 /* OtherConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +198,34 @@
 				B50000000000000000000004 /* Components */,
 				B50000000000000000000005 /* Views */,
 				B50000000000000000000006 /* Utilities */,
+				B50000000000000000000007 /* Coordinator */,
+				B50000000000000000000008 /* Configurator */,
 			);
 			path = V8HealthSwiftUI;
+			sourceTree = "<group>";
+		};
+		B50000000000000000000007 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000038 /* Coordinator.swift */,
+				B20000000000000000000039 /* AppCoordinator.swift */,
+				B2000000000000000000003A /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B50000000000000000000008 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				B2000000000000000000003B /* Configurator.swift */,
+				B2000000000000000000003C /* DashboardConfigurator.swift */,
+				B2000000000000000000003D /* DeviceScanConfigurator.swift */,
+				B2000000000000000000003E /* SettingsConfigurator.swift */,
+				B2000000000000000000003F /* LiveDataConfigurator.swift */,
+				B20000000000000000000040 /* HistoryConfigurator.swift */,
+				B20000000000000000000041 /* OtherConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		B50000000000000000000001 /* Core */ = {
@@ -440,6 +486,16 @@
 				B10000000000000000000035 /* LogExportView.swift in Sources */,
 				B10000000000000000000036 /* ViewLifeTracker.swift in Sources */,
 				B10000000000000000000037 /* AppLogger.swift in Sources */,
+				B10000000000000000000038 /* Coordinator.swift in Sources */,
+				B10000000000000000000039 /* AppCoordinator.swift in Sources */,
+				B1000000000000000000003A /* MainCoordinator.swift in Sources */,
+				B1000000000000000000003B /* Configurator.swift in Sources */,
+				B1000000000000000000003C /* DashboardConfigurator.swift in Sources */,
+				B1000000000000000000003D /* DeviceScanConfigurator.swift in Sources */,
+				B1000000000000000000003E /* SettingsConfigurator.swift in Sources */,
+				B1000000000000000000003F /* LiveDataConfigurator.swift in Sources */,
+				B10000000000000000000040 /* HistoryConfigurator.swift in Sources */,
+				B10000000000000000000041 /* OtherConfigurator.swift in Sources */,
 				A1000000000000000000000C /* NewBle.m in Sources */,
 				A1000000000000000000000D /* BleDelegateProxy.m in Sources */,
 			);

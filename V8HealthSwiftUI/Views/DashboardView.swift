@@ -43,33 +43,7 @@ struct DashboardView: View {
             }
             .padding(.vertical)
         }
-        .navigationDestination(for: DashboardRoute.self) { route in
-            destination(for: route)
-        }
         .trackLife()
-    }
-
-    @ViewBuilder
-    private func destination(for route: DashboardRoute) -> some View {
-        switch route {
-        case .deviceTime: DeviceTimeView()
-        case .personalInfo: PersonalInfoView()
-        case .stepGoal: StepGoalView()
-        case .deviceInfo: DeviceInfoView()
-        case .autoMeasurement: AutoMeasurementView()
-        case .realtimeData: RealtimeDataView()
-        case .activityHistory: ActivityHistoryView()
-        case .sleepHistory: SleepHistoryView()
-        case .heartRate: HeartRateView()
-        case .temperature: TemperatureHistoryView()
-        case .spo2: SpO2View()
-        case .hrv: HRVHistoryView()
-        case .ecg: ECGView()
-        case .logExport: LogExportView()
-        case .activityMode: ActivityModeView()
-        case .ppi: PPIHistoryView()
-        case .alarms: AlarmListView()
-        }
     }
 
     private var statusCard: some View {

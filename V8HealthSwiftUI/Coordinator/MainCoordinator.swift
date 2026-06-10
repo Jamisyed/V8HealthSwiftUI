@@ -1,50 +1,77 @@
 //
 //  MainCoordinator.swift
-//  iOSCodingChallenge
-//
-//  Created by Syed M Abdul Rehman on 06/05/2026.
+//  V8HealthSwiftUI
 //
 
-import UIKit
+import SwiftUI
 
-protocol MainFlowCoordinating: AnyObject {
-    func didRequestLogout()
-}
-
+@MainActor
+@Observable
 final class MainCoordinator: Coordinator {
     let id = UUID()
     var childCoordinators: [Coordinator] = []
-    weak var delegate: MainCoordinatorDelegate?
+    var showScanner = false
 
-    private let window: UIWindow
-    private let postConfigurator = PostConfigurator()
-    private let favoriteConfigurator = FavoriteConfigurator()
+    private let dashboardConfigurator = DashboardConfigurator()
+    private let deviceScanConfigurator = DeviceScanConfigurator()
+    private let settingsConfigurator = SettingsConfigurator()
+    private let liveDataConfigurator = LiveDataConfigurator()
+    private let historyConfigurator = HistoryConfigurator()
+    private let otherConfigurator = OtherConfigurator()
 
-    init(window: UIWindow) {
-        self.window = window
+    func start() {}
+
+    @ViewBuilder
+    func screen(for route: DashboardRoute) -> some View {
+        switch route {
+        case .deviceTime, .personalInfo, .stepGoal, .deviceInfo, .autoMeasurement:
+            settingsConfigurator.screen(for: route)
+        case .realtimeData, .activityMode, .ecg:
+            liveDataConfigurator.screen(for: route)
+        case .activityHistory, .sleepHistory, .heartRate, .temperature, .spo2, .hrv, .ppi:
+            historyConfigurator.screen(for: route)
+        case .alarms, .logExport:
+            otherConfigurator.screen(for: route)
+        }
     }
 
-    func start() {
-        let tabbar = TabbarViewController(nibName: TabbarViewController.nibName, bundle: nil)
+    func makeDashboard(showScanner: Binding<Bool>) -> some View {
+        dashboardConfigurator.create(dependencies: .init(showScanner: showScanner))
+    }
 
-        let postViewController = postConfigurator.create(
-            dependencies: .init(
-                coordinator: self
-            )
-        )
-        let favoriteViewController = favoriteConfigurator.create(
-            dependencies: .init()
-        )
-
-        tabbar.setViewControllers([postViewController, favoriteViewController], animated: false)
-        window.rootViewController = tabbar
-        window.makeKeyAndVisible()
+    func makeDeviceScanner() -> some View {
+        deviceScanConfigurator.create(dependencies: .init())
     }
 }
 
-extension MainCoordinator: MainFlowCoordinating {
-    func didRequestLogout() {
-        delegate?.mainCoordinatorDidRequestLogout(self)
+struct MainCoordinatorRootView: View {
+    @Bindable var coordinator: MainCoordinator
+    @Bindable private var ble = V8BLEClient.shared
+
+    var body: some View {
+        NavigationStack {
+            coordinator.makeDashboard(showScanner: $coordinator.showScanner)
+                .navigationTitle("V8 Health")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(ble.connection.isConnected ? "Disconnect" : "Scan") {
+                            if ble.connection.isConnected {
+                                ble.disconnect()
+                            } else {
+                                coordinator.showScanner = true
+                                ble.startScan()
+                            }
+                        }
+                    }
+                }
+                .navigationDestination(for: DashboardRoute.self) { route in
+                    coordinator.screen(for: route)
+                }
+        }
+        .sheet(isPresented: $coordinator.showScanner) {
+            coordinator.makeDeviceScanner()
+        }
+        .deviceEventAlerts()
+        .trackLife()
     }
 }
-

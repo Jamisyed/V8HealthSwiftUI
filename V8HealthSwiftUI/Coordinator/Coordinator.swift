@@ -1,8 +1,6 @@
 //
 //  Coordinator.swift
-//  iOSCodingChallenge
-//
-//  Created by Syed M Abdul Rehman on 06/05/2026.
+//  V8HealthSwiftUI
 //
 
 import Foundation
@@ -22,4 +20,3 @@ extension Coordinator {
         childCoordinators.removeAll { $0.id == coordinator.id }
     }
 }
-
