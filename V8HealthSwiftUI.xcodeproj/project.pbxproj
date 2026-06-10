@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B10000000000000000000001 /* V8HealthSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* V8HealthSwiftUIApp.swift */; };
+		B10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000002 /* ContentView.swift */; };
+		B10000000000000000000003 /* BLEConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000003 /* BLEConstants.swift */; };
+		B10000000000000000000004 /* ConnectionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000004 /* ConnectionModels.swift */; };
+		B10000000000000000000005 /* SDKHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000005 /* SDKHelpers.swift */; };
+		B10000000000000000000006 /* BLECommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000006 /* BLECommand.swift */; };
+		B10000000000000000000007 /* HistorySyncHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000007 /* HistorySyncHelper.swift */; };
+		B10000000000000000000008 /* DeviceEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000008 /* DeviceEventMonitor.swift */; };
+		B10000000000000000000009 /* V8BLEClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000009 /* V8BLEClient.swift */; };
+		B1000000000000000000000A /* ViewModelSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000000A /* ViewModelSubscription.swift */; };
+		B1000000000000000000000B /* DeviceInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000000B /* DeviceInfoViewModel.swift */; };
+		B1000000000000000000000C /* PersonalInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000000C /* PersonalInfoViewModel.swift */; };
+		B1000000000000000000000D /* StepGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000000D /* StepGoalViewModel.swift */; };
+		B1000000000000000000000E /* DeviceTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000000E /* DeviceTimeViewModel.swift */; };
+		B1000000000000000000000F /* HeartRateHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000000F /* HeartRateHistoryViewModel.swift */; };
+		B10000000000000000000010 /* SpO2HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000010 /* SpO2HistoryViewModel.swift */; };
+		B10000000000000000000011 /* AutoMeasurementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000011 /* AutoMeasurementViewModel.swift */; };
+		B10000000000000000000012 /* RealtimeDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000012 /* RealtimeDataViewModel.swift */; };
+		B10000000000000000000013 /* ActivityHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000013 /* ActivityHistoryViewModel.swift */; };
+		B10000000000000000000014 /* SleepHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000014 /* SleepHistoryViewModel.swift */; };
+		B10000000000000000000015 /* TemperatureHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000015 /* TemperatureHistoryViewModel.swift */; };
+		B10000000000000000000016 /* HRVHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000016 /* HRVHistoryViewModel.swift */; };
+		B10000000000000000000017 /* PPIHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000017 /* PPIHistoryViewModel.swift */; };
+		B10000000000000000000018 /* ECGViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000018 /* ECGViewModel.swift */; };
+		B10000000000000000000019 /* ActivityModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000019 /* ActivityModeViewModel.swift */; };
+		B1000000000000000000001A /* AlarmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000001A /* AlarmListViewModel.swift */; };
+		B1000000000000000000001B /* LogExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000001B /* LogExportViewModel.swift */; };
+		B1000000000000000000001C /* SyncLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000001C /* SyncLogView.swift */; };
+		B1000000000000000000001D /* ConnectionRequiredModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000001D /* ConnectionRequiredModifier.swift */; };
+		B1000000000000000000001E /* WeekdayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000001E /* WeekdayPickerView.swift */; };
+		B1000000000000000000001F /* ECGWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000001F /* ECGWaveformView.swift */; };
+		B10000000000000000000020 /* FeatureDocsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000020 /* FeatureDocsView.swift */; };
+		B10000000000000000000021 /* DeviceEventAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000021 /* DeviceEventAlertModifier.swift */; };
+		B10000000000000000000022 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000022 /* DashboardView.swift */; };
+		B10000000000000000000023 /* DeviceScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000023 /* DeviceScanView.swift */; };
+		B10000000000000000000024 /* DeviceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000024 /* DeviceInfoView.swift */; };
+		B10000000000000000000025 /* PersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000025 /* PersonalInfoView.swift */; };
+		B10000000000000000000026 /* StepGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000026 /* StepGoalView.swift */; };
+		B10000000000000000000027 /* DeviceTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000027 /* DeviceTimeView.swift */; };
+		B10000000000000000000028 /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000028 /* HeartRateView.swift */; };
+		B10000000000000000000029 /* SpO2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000029 /* SpO2View.swift */; };
+		B1000000000000000000002A /* AutoMeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000002A /* AutoMeasurementView.swift */; };
+		B1000000000000000000002B /* RealtimeDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000002B /* RealtimeDataView.swift */; };
+		B1000000000000000000002C /* ActivityHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000002C /* ActivityHistoryView.swift */; };
+		B1000000000000000000002D /* SleepHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000002D /* SleepHistoryView.swift */; };
+		B1000000000000000000002E /* TemperatureHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000002E /* TemperatureHistoryView.swift */; };
+		B1000000000000000000002F /* HRVHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2000000000000000000002F /* HRVHistoryView.swift */; };
+		B10000000000000000000030 /* PPIHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000030 /* PPIHistoryView.swift */; };
+		B10000000000000000000031 /* ECGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000031 /* ECGView.swift */; };
+		B10000000000000000000032 /* ActivityModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000032 /* ActivityModeView.swift */; };
+		B10000000000000000000033 /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000033 /* AlarmListView.swift */; };
+		B10000000000000000000034 /* AlarmEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000034 /* AlarmEditView.swift */; };
+		B10000000000000000000035 /* LogExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000035 /* LogExportView.swift */; };
+		B10000000000000000000036 /* ViewLifeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000036 /* ViewLifeTracker.swift */; };
+		B10000000000000000000037 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000037 /* AppLogger.swift */; };
+		A1000000000000000000000C /* NewBle.m in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* NewBle.m */; };
+		A1000000000000000000000D /* BleDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000D /* BleDelegateProxy.m */; };
+		A1000000000000000000000E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E /* Assets.xcassets */; };
+		A1000000000000000000000F /* libBleSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F /* libBleSDK.a */; };
+		A10000000000000000000010 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* CoreBluetooth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B20000000000000000000001 /* V8HealthSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V8HealthSwiftUIApp.swift; sourceTree = "<group>"; };
+		B20000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B20000000000000000000003 /* BLEConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConstants.swift; sourceTree = "<group>"; };
+		B20000000000000000000004 /* ConnectionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionModels.swift; sourceTree = "<group>"; };
+		B20000000000000000000005 /* SDKHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKHelpers.swift; sourceTree = "<group>"; };
+		B20000000000000000000006 /* BLECommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECommand.swift; sourceTree = "<group>"; };
+		B20000000000000000000007 /* HistorySyncHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySyncHelper.swift; sourceTree = "<group>"; };
+		B20000000000000000000008 /* DeviceEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceEventMonitor.swift; sourceTree = "<group>"; };
+		B20000000000000000000009 /* V8BLEClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V8BLEClient.swift; sourceTree = "<group>"; };
+		B2000000000000000000000A /* ViewModelSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSubscription.swift; sourceTree = "<group>"; };
+		B2000000000000000000000B /* DeviceInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewModel.swift; sourceTree = "<group>"; };
+		B2000000000000000000000C /* PersonalInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewModel.swift; sourceTree = "<group>"; };
+		B2000000000000000000000D /* StepGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepGoalViewModel.swift; sourceTree = "<group>"; };
+		B2000000000000000000000E /* DeviceTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTimeViewModel.swift; sourceTree = "<group>"; };
+		B2000000000000000000000F /* HeartRateHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateHistoryViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000010 /* SpO2HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpO2HistoryViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000011 /* AutoMeasurementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMeasurementViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000012 /* RealtimeDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDataViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000013 /* ActivityHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHistoryViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000014 /* SleepHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepHistoryViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000015 /* TemperatureHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureHistoryViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000016 /* HRVHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRVHistoryViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000017 /* PPIHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPIHistoryViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000018 /* ECGViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGViewModel.swift; sourceTree = "<group>"; };
+		B20000000000000000000019 /* ActivityModeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModeViewModel.swift; sourceTree = "<group>"; };
+		B2000000000000000000001A /* AlarmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListViewModel.swift; sourceTree = "<group>"; };
+		B2000000000000000000001B /* LogExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogExportViewModel.swift; sourceTree = "<group>"; };
+		B2000000000000000000001C /* SyncLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncLogView.swift; sourceTree = "<group>"; };
+		B2000000000000000000001D /* ConnectionRequiredModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRequiredModifier.swift; sourceTree = "<group>"; };
+		B2000000000000000000001E /* WeekdayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayPickerView.swift; sourceTree = "<group>"; };
+		B2000000000000000000001F /* ECGWaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGWaveformView.swift; sourceTree = "<group>"; };
+		B20000000000000000000020 /* FeatureDocsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureDocsView.swift; sourceTree = "<group>"; };
+		B20000000000000000000021 /* DeviceEventAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceEventAlertModifier.swift; sourceTree = "<group>"; };
+		B20000000000000000000022 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		B20000000000000000000023 /* DeviceScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanView.swift; sourceTree = "<group>"; };
+		B20000000000000000000024 /* DeviceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoView.swift; sourceTree = "<group>"; };
+		B20000000000000000000025 /* PersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
+		B20000000000000000000026 /* StepGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepGoalView.swift; sourceTree = "<group>"; };
+		B20000000000000000000027 /* DeviceTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTimeView.swift; sourceTree = "<group>"; };
+		B20000000000000000000028 /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		B20000000000000000000029 /* SpO2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpO2View.swift; sourceTree = "<group>"; };
+		B2000000000000000000002A /* AutoMeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMeasurementView.swift; sourceTree = "<group>"; };
+		B2000000000000000000002B /* RealtimeDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDataView.swift; sourceTree = "<group>"; };
+		B2000000000000000000002C /* ActivityHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHistoryView.swift; sourceTree = "<group>"; };
+		B2000000000000000000002D /* SleepHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepHistoryView.swift; sourceTree = "<group>"; };
+		B2000000000000000000002E /* TemperatureHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureHistoryView.swift; sourceTree = "<group>"; };
+		B2000000000000000000002F /* HRVHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRVHistoryView.swift; sourceTree = "<group>"; };
+		B20000000000000000000030 /* PPIHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPIHistoryView.swift; sourceTree = "<group>"; };
+		B20000000000000000000031 /* ECGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGView.swift; sourceTree = "<group>"; };
+		B20000000000000000000032 /* ActivityModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModeView.swift; sourceTree = "<group>"; };
+		B20000000000000000000033 /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+		B20000000000000000000034 /* AlarmEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditView.swift; sourceTree = "<group>"; };
+		B20000000000000000000035 /* LogExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogExportView.swift; sourceTree = "<group>"; };
+		B20000000000000000000036 /* ViewLifeTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLifeTracker.swift; sourceTree = "<group>"; };
+		B20000000000000000000037 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* NewBle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewBle.m; sourceTree = "<group>"; };
+		A2000000000000000000000D /* BleDelegateProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BleDelegateProxy.m; sourceTree = "<group>"; };
+		A2000000000000000000000E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000000000000000000000F /* libBleSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBleSDK.a; sourceTree = "<group>"; };
+		A20000000000000000000010 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A20000000000000000000011 /* NewBle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewBle.h; sourceTree = "<group>"; };
+		A20000000000000000000012 /* BleDelegateProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BleDelegateProxy.h; sourceTree = "<group>"; };
+		A20000000000000000000013 /* BleLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BleLogging.h; sourceTree = "<group>"; };
+		A20000000000000000000014 /* V8HealthSwiftUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "V8HealthSwiftUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		A20000000000000000000015 /* BleSDK_V8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BleSDK_V8.h; sourceTree = "<group>"; };
+		A20000000000000000000016 /* BleSDK_Header_V8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BleSDK_Header_V8.h; sourceTree = "<group>"; };
+		A20000000000000000000017 /* DeviceData_V8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceData_V8.h; sourceTree = "<group>"; };
+		A20000000000000000000018 /* BleConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BleConfig.h; sourceTree = "<group>"; };
+		A30000000000000000000001 /* V8HealthSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V8HealthSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A40000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000000F /* libBleSDK.a in Frameworks */,
+				A10000000000000000000010 /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A50000000000000000000002 /* V8HealthSwiftUI */,
+				A50000000000000000000003 /* BLE */,
+				A50000000000000000000004 /* BleSDK */,
+				A50000000000000000000005 /* Products */,
+				B582F0F52FD6AE3F00E8FD21 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		A50000000000000000000002 /* V8HealthSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000001 /* V8HealthSwiftUIApp.swift */,
+				B20000000000000000000002 /* ContentView.swift */,
+				A20000000000000000000014 /* V8HealthSwiftUI-Bridging-Header.h */,
+				A2000000000000000000000E /* Assets.xcassets */,
+				B50000000000000000000001 /* Core */,
+				B50000000000000000000002 /* Models */,
+				B50000000000000000000003 /* ViewModels */,
+				B50000000000000000000004 /* Components */,
+				B50000000000000000000005 /* Views */,
+				B50000000000000000000006 /* Utilities */,
+			);
+			path = V8HealthSwiftUI;
+			sourceTree = "<group>";
+		};
+		B50000000000000000000001 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000005 /* SDKHelpers.swift */,
+				B20000000000000000000006 /* BLECommand.swift */,
+				B20000000000000000000007 /* HistorySyncHelper.swift */,
+				B20000000000000000000008 /* DeviceEventMonitor.swift */,
+				B20000000000000000000009 /* V8BLEClient.swift */,
+				B2000000000000000000000A /* ViewModelSubscription.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B50000000000000000000002 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000003 /* BLEConstants.swift */,
+				B20000000000000000000004 /* ConnectionModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B50000000000000000000003 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B2000000000000000000000B /* DeviceInfoViewModel.swift */,
+				B2000000000000000000000C /* PersonalInfoViewModel.swift */,
+				B2000000000000000000000D /* StepGoalViewModel.swift */,
+				B2000000000000000000000E /* DeviceTimeViewModel.swift */,
+				B2000000000000000000000F /* HeartRateHistoryViewModel.swift */,
+				B20000000000000000000010 /* SpO2HistoryViewModel.swift */,
+				B20000000000000000000011 /* AutoMeasurementViewModel.swift */,
+				B20000000000000000000012 /* RealtimeDataViewModel.swift */,
+				B20000000000000000000013 /* ActivityHistoryViewModel.swift */,
+				B20000000000000000000014 /* SleepHistoryViewModel.swift */,
+				B20000000000000000000015 /* TemperatureHistoryViewModel.swift */,
+				B20000000000000000000016 /* HRVHistoryViewModel.swift */,
+				B20000000000000000000017 /* PPIHistoryViewModel.swift */,
+				B20000000000000000000018 /* ECGViewModel.swift */,
+				B20000000000000000000019 /* ActivityModeViewModel.swift */,
+				B2000000000000000000001A /* AlarmListViewModel.swift */,
+				B2000000000000000000001B /* LogExportViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B50000000000000000000004 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B2000000000000000000001C /* SyncLogView.swift */,
+				B2000000000000000000001D /* ConnectionRequiredModifier.swift */,
+				B2000000000000000000001E /* WeekdayPickerView.swift */,
+				B2000000000000000000001F /* ECGWaveformView.swift */,
+				B20000000000000000000020 /* FeatureDocsView.swift */,
+				B20000000000000000000021 /* DeviceEventAlertModifier.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B50000000000000000000005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000022 /* DashboardView.swift */,
+				B20000000000000000000023 /* DeviceScanView.swift */,
+				B20000000000000000000024 /* DeviceInfoView.swift */,
+				B20000000000000000000025 /* PersonalInfoView.swift */,
+				B20000000000000000000026 /* StepGoalView.swift */,
+				B20000000000000000000027 /* DeviceTimeView.swift */,
+				B20000000000000000000028 /* HeartRateView.swift */,
+				B20000000000000000000029 /* SpO2View.swift */,
+				B2000000000000000000002A /* AutoMeasurementView.swift */,
+				B2000000000000000000002B /* RealtimeDataView.swift */,
+				B2000000000000000000002C /* ActivityHistoryView.swift */,
+				B2000000000000000000002D /* SleepHistoryView.swift */,
+				B2000000000000000000002E /* TemperatureHistoryView.swift */,
+				B2000000000000000000002F /* HRVHistoryView.swift */,
+				B20000000000000000000030 /* PPIHistoryView.swift */,
+				B20000000000000000000031 /* ECGView.swift */,
+				B20000000000000000000032 /* ActivityModeView.swift */,
+				B20000000000000000000033 /* AlarmListView.swift */,
+				B20000000000000000000034 /* AlarmEditView.swift */,
+				B20000000000000000000035 /* LogExportView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B50000000000000000000006 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B20000000000000000000037 /* AppLogger.swift */,
+				B20000000000000000000036 /* ViewLifeTracker.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000003 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000011 /* NewBle.h */,
+				A2000000000000000000000C /* NewBle.m */,
+				A20000000000000000000012 /* BleDelegateProxy.h */,
+				A2000000000000000000000D /* BleDelegateProxy.m */,
+				A20000000000000000000013 /* BleLogging.h */,
+				A20000000000000000000018 /* BleConfig.h */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000004 /* BleSDK */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000015 /* BleSDK_V8.h */,
+				A20000000000000000000016 /* BleSDK_Header_V8.h */,
+				A20000000000000000000017 /* DeviceData_V8.h */,
+				A2000000000000000000000F /* libBleSDK.a */,
+			);
+			path = BleSDK;
+			sourceTree = "<group>";
+		};
+		A50000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000001 /* V8HealthSwiftUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B582F0F52FD6AE3F00E8FD21 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000010 /* CoreBluetooth.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60000000000000000000001 /* V8HealthSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000000000000000000002 /* Build configuration list for PBXNativeTarget "V8HealthSwiftUI" */;
+			buildPhases = (
+				A60000000000000000000002 /* Sources */,
+				A40000000000000000000001 /* Frameworks */,
+				A60000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = V8HealthSwiftUI;
+			productName = V8HealthSwiftUI;
+			productReference = A30000000000000000000001 /* V8HealthSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A60000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A80000000000000000000001 /* Build configuration list for PBXProject "V8HealthSwiftUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A50000000000000000000001;
+			productRefGroup = A50000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60000000000000000000001 /* V8HealthSwiftUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000000E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000001 /* V8HealthSwiftUIApp.swift in Sources */,
+				B10000000000000000000002 /* ContentView.swift in Sources */,
+				B10000000000000000000003 /* BLEConstants.swift in Sources */,
+				B10000000000000000000004 /* ConnectionModels.swift in Sources */,
+				B10000000000000000000005 /* SDKHelpers.swift in Sources */,
+				B10000000000000000000006 /* BLECommand.swift in Sources */,
+				B10000000000000000000007 /* HistorySyncHelper.swift in Sources */,
+				B10000000000000000000008 /* DeviceEventMonitor.swift in Sources */,
+				B10000000000000000000009 /* V8BLEClient.swift in Sources */,
+				B1000000000000000000000A /* ViewModelSubscription.swift in Sources */,
+				B1000000000000000000000B /* DeviceInfoViewModel.swift in Sources */,
+				B1000000000000000000000C /* PersonalInfoViewModel.swift in Sources */,
+				B1000000000000000000000D /* StepGoalViewModel.swift in Sources */,
+				B1000000000000000000000E /* DeviceTimeViewModel.swift in Sources */,
+				B1000000000000000000000F /* HeartRateHistoryViewModel.swift in Sources */,
+				B10000000000000000000010 /* SpO2HistoryViewModel.swift in Sources */,
+				B10000000000000000000011 /* AutoMeasurementViewModel.swift in Sources */,
+				B10000000000000000000012 /* RealtimeDataViewModel.swift in Sources */,
+				B10000000000000000000013 /* ActivityHistoryViewModel.swift in Sources */,
+				B10000000000000000000014 /* SleepHistoryViewModel.swift in Sources */,
+				B10000000000000000000015 /* TemperatureHistoryViewModel.swift in Sources */,
+				B10000000000000000000016 /* HRVHistoryViewModel.swift in Sources */,
+				B10000000000000000000017 /* PPIHistoryViewModel.swift in Sources */,
+				B10000000000000000000018 /* ECGViewModel.swift in Sources */,
+				B10000000000000000000019 /* ActivityModeViewModel.swift in Sources */,
+				B1000000000000000000001A /* AlarmListViewModel.swift in Sources */,
+				B1000000000000000000001B /* LogExportViewModel.swift in Sources */,
+				B1000000000000000000001C /* SyncLogView.swift in Sources */,
+				B1000000000000000000001D /* ConnectionRequiredModifier.swift in Sources */,
+				B1000000000000000000001E /* WeekdayPickerView.swift in Sources */,
+				B1000000000000000000001F /* ECGWaveformView.swift in Sources */,
+				B10000000000000000000020 /* FeatureDocsView.swift in Sources */,
+				B10000000000000000000021 /* DeviceEventAlertModifier.swift in Sources */,
+				B10000000000000000000022 /* DashboardView.swift in Sources */,
+				B10000000000000000000023 /* DeviceScanView.swift in Sources */,
+				B10000000000000000000024 /* DeviceInfoView.swift in Sources */,
+				B10000000000000000000025 /* PersonalInfoView.swift in Sources */,
+				B10000000000000000000026 /* StepGoalView.swift in Sources */,
+				B10000000000000000000027 /* DeviceTimeView.swift in Sources */,
+				B10000000000000000000028 /* HeartRateView.swift in Sources */,
+				B10000000000000000000029 /* SpO2View.swift in Sources */,
+				B1000000000000000000002A /* AutoMeasurementView.swift in Sources */,
+				B1000000000000000000002B /* RealtimeDataView.swift in Sources */,
+				B1000000000000000000002C /* ActivityHistoryView.swift in Sources */,
+				B1000000000000000000002D /* SleepHistoryView.swift in Sources */,
+				B1000000000000000000002E /* TemperatureHistoryView.swift in Sources */,
+				B1000000000000000000002F /* HRVHistoryView.swift in Sources */,
+				B10000000000000000000030 /* PPIHistoryView.swift in Sources */,
+				B10000000000000000000031 /* ECGView.swift in Sources */,
+				B10000000000000000000032 /* ActivityModeView.swift in Sources */,
+				B10000000000000000000033 /* AlarmListView.swift in Sources */,
+				B10000000000000000000034 /* AlarmEditView.swift in Sources */,
+				B10000000000000000000035 /* LogExportView.swift in Sources */,
+				B10000000000000000000036 /* ViewLifeTracker.swift in Sources */,
+				B10000000000000000000037 /* AppLogger.swift in Sources */,
+				A1000000000000000000000C /* NewBle.m in Sources */,
+				A1000000000000000000000D /* BleDelegateProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A90000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A90000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L3M9434C6K;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BleSDK",
+					"$(PROJECT_DIR)/BLE",
+				);
+				INFOPLIST_KEY_CFBundleDisplayName = "V8 Health";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app connects to your V8 health wearable over Bluetooth.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BleSDK",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.v8health.swiftui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "V8HealthSwiftUI/V8HealthSwiftUI-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BleSDK",
+					"$(PROJECT_DIR)/BLE",
+				);
+			};
+			name = Debug;
+		};
+		A90000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L3M9434C6K;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BleSDK",
+					"$(PROJECT_DIR)/BLE",
+				);
+				INFOPLIST_KEY_CFBundleDisplayName = "V8 Health";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app connects to your V8 health wearable over Bluetooth.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BleSDK",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.v8health.swiftui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "V8HealthSwiftUI/V8HealthSwiftUI-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BleSDK",
+					"$(PROJECT_DIR)/BLE",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A80000000000000000000001 /* Build configuration list for PBXProject "V8HealthSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000001 /* Debug */,
+				A90000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000000000000000000002 /* Build configuration list for PBXNativeTarget "V8HealthSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000003 /* Debug */,
+				A90000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A70000000000000000000001 /* Project object */;
+}
